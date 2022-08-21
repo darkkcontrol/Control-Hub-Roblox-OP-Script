@@ -416,6 +416,11 @@ end)
         loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/WRD%20Aimbot.txt"))()
     end)
 
+    MiscSection:NewButton("Universal Reach", "OP REACH SCRIPT", function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/MEHvVngb"))()
+    end)
+
+
     --Other
     local Other = Window:NewTab("Other")
     local OtherSection = Other:NewSection("Other")
