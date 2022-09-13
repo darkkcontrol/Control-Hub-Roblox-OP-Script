@@ -1,4 +1,4 @@
--- Control Hub | | Made by Dark Dark Control#6967 on discord
+-- Control Hub | | Dark Control#6967 on discord
 
 game.StarterGui:SetCore("SendNotification", {
 	Title = "Control Hub";
@@ -8,7 +8,7 @@ game.StarterGui:SetCore("SendNotification", {
 setclipboard("https://discord.gg/t5pzFMPdY4")
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Control Hub | | Made by Dark Control#0001 on discord", "Ocean")
+local Window = Library.CreateLib("Control Hub | | Made by Dark Control#6967 on discord", "Ocean")
     -- MAIN
     local Main = Window:NewTab("Main")
     local MainSection = Main:NewSection("Main")
@@ -420,7 +420,7 @@ end)
         loadstring(game:HttpGet("https://pastebin.com/raw/MEHvVngb"))()
     end)
 
-    MiscSection:NewButton("Universal Reach", "OP REACH SCRIPT", function()
+    MiscSection:NewButton("Remove displayname", "You know what this does", function()
         local Players = game:FindService("Players")
 
         require(game:GetService("Chat"):WaitForChild("ClientChatModules").ChatSettings).PlayerDisplayNamesEnabled = false
@@ -561,3 +561,23 @@ local SettingSection = Setting:NewSection("Setting")
 SettingSection:NewKeybind("OpenGUI", "KeybindInfo", Enum.KeyCode.Quote, function()
 	Library:ToggleUI()
 end)
+
+local SettingSection = Setting:NewSection("Credits")
+
+SettingSection:NewLabel("Owner = Dark Control#6967")
+
+local SettingSection = Setting:NewSection("Help")
+
+SettingSection:NewLabel("if you have any bugs or need")
+SettingSection:NewLabel("help dm Dark Control#6967 on discord")
+SettingSection:NewLabel("-----------------------------------------------")
+SettingSection:NewLabel("if you have a idea or something,")
+SettingSection:NewLabel("write it on my discord server")
+SettingSection:NewLabel("click the button below to copy link")
+
+SettingSection:NewButton("Copy Discord invite", "Copy Discord invite", function()
+    setclipboard("https://discord.gg/2dNf8hzEp6")
+end)
+
+SettingSection:NewLabel("-----------------------------------------------")
+SettingSection:NewLabel("More updates coming soon!!! enjoy!!")
