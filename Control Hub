@@ -420,6 +420,34 @@ end)
         loadstring(game:HttpGet("https://pastebin.com/raw/MEHvVngb"))()
     end)
 
+    MiscSection:NewButton("Universal Reach", "OP REACH SCRIPT", function()
+        local Players = game:FindService("Players")
+
+        require(game:GetService("Chat"):WaitForChild("ClientChatModules").ChatSettings).PlayerDisplayNamesEnabled = false
+        
+        local function rename(character,name)
+            repeat task.wait() until character:FindFirstChildWhichIsA("Humanoid")
+            character:FindFirstChildWhichIsA("Humanoid").DisplayName = name
+        end
+        
+        for i,v in next, Players:GetPlayers() do
+            if v.Character then
+                v.DisplayName = v.Name
+                rename(v.Character,v.Name)
+            end
+            v.CharacterAdded:Connect(function(char)
+                rename(char,v.Name)
+            end)
+        end
+        
+        Players.PlayerAdded:Connect(function(plr)
+            plr.DisplayName = plr.Name
+            plr.CharacterAdded:Connect(function(char)
+                rename(char,plr.Name)
+            end)
+        end)
+    end)
+
 
     --Other
     local Other = Window:NewTab("Other")
@@ -481,6 +509,14 @@ GamesSection:NewButton("roblox stay alive and flex your time on others script", 
     loadstring(game:HttpGet(("https://pastebin.com/raw/4hSRGbkk"),true))()
 end)
 
+GamesSection:NewButton("Arsenal", "Text Deleated", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/HonestlyDex/DexHub/main/V3.lua"))()
+end)
+
+GamesSection:NewButton("Tower of hell", "Text Deleated", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/jiAQF1tc"))()
+end)
+
 
     --Hubs
     local Hubs = Window:NewTab("Hubs")
@@ -506,8 +542,15 @@ end)
         loadstring(game:HttpGet('https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source', true))()
     end)
 
-    HubsSection:NewButton("Funhub", "Free Synapse X?!?!?!", function()
+    HubsSection:NewButton("Funhub", "HEHE BOI", function()
         loadstring(game:HttpGet("https://pastebin.com/raw/3xqzxtYN", true))()
+    end)
+
+    HubsSection:NewButton("AuratusX", "SOO MANY SCRIPTS!!!", function()
+        while not game:IsLoaded() do
+            wait(0.1)
+        end
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/RealMrQuacks/AuratusX/master/Load", true))()
     end)
 
 
