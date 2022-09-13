@@ -1,4 +1,4 @@
--- Control Hub | | Made by Dark Control#0001 on discord
+-- Control Hub | | Made by Dark Dark Control#6967 on discord
 
 game.StarterGui:SetCore("SendNotification", {
 	Title = "Control Hub";
