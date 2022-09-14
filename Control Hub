@@ -553,6 +553,18 @@ end)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/RealMrQuacks/AuratusX/master/Load", true))()
     end)
 
+    HubsSection:NewButton("DomainX ", "Its Good ", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/DomainX/main/source',true))()
+    end)
+
+    HubsSection:NewButton("backdoor.exe V8", "Dont Ask Me", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/v8/src/main.lua"))();
+    end)
+
+    HubsSection:NewButton("backdoor.exe V6X", "Dont Ask Me", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/v6x/source.lua"))();
+    end)
+
 
 -- Setting
 local Setting = Window:NewTab("Setting")
