@@ -470,14 +470,8 @@ end)
     OtherSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
         loadstring(game:HttpGet(("https://pastebin.com/raw/PXAdj6ED"),true))()
     end)
-    
 
-
-    --Map
-    local Map = Window:NewTab("Map")
-    local MapSection = Map:NewSection("Map")
-
-    MapSection:NewButton("Set Night", "Sets the game day to night", function()
+    OtherSection:NewButton("Set Night", "Sets the game day to night", function()
         lighting = game:GetService("Lighting")
 if lighting.TimeOfDay == "00:00:00" then
     lighting.TimeOfDay = 11
@@ -485,6 +479,46 @@ else
     lighting.TimeOfDay = 24
 end
     end)
+
+
+    --Fe script
+    local Fe Script = Window:NewTab("Fe Script")
+    local Fe scriptSection = Fe script:NewSection("Fe Script")
+
+    Fe scriptSection:NewButton("FE Freeze Time", "Yo whered u go???", function()
+
+_G.key = Enum.KeyCode.LeftControl
+ 
+loadstring(game:HttpGet("https://paste.gg/p/anonymous/cb1c7198b269449eb8a2cf8ced061bed/files/4a98e88f82ee47388b3030a7f000b34e/raw", true))()
+ 
+setting = settings().Network
+local Effect = Instance.new("ColorCorrectionEffect")
+Effect.Parent = game.Lighting
+Effect.Saturation = -1 
+Effect.Contrast = 0
+toggle = false
+ 
+Effect.Enabled = false
+function onKeyPress(inputObject, gameProcessedEvent)
+	if inputObject.KeyCode == Enum.KeyCode.RightControl then	
+		if toggle == false then
+			setting.IncomingReplicationLag = 1000
+			Effect.Enabled = true
+			toggle = true
+		else
+			setting.IncomingReplicationLag = 0
+			Effect.Enabled = false
+			toggle = false
+		end
+ 
+	end
+end
+ 
+game:GetService("UserInputService").InputBegan:connect(onKeyPress)
+game:GetService("UserInputService").InputBegan:connect(onKeyPress)
+    end)
+    
+    
 
     --Games
     local Games = Window:NewTab("Games")
@@ -595,6 +629,22 @@ end)
 
     HubsSection:NewButton("LostPoint FE Script Hub", "OOOH", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/JunglePush/LostPoint/main/LostPointScript"))()
+    end)
+
+    HubsSection:NewButton("Shattervast Admin", "A VERY GOOD ADMIN? AM IN!!!!!", function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/fBjf9wM5"))()
+    end)
+
+    HubsSection:NewButton("Beach Hub", "more like bitch hub", function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/bedra45/BeachHub/main/BeachAnimation'),true))()
+    end)
+
+    HubsSection:NewButton("RemX", "idk about this one", function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Henry887/RemX-Script-Hub/main/main.lua'),true))()
+    end)
+
+    HubsSection:NewButton("DarkWare", "Error", function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Yarik312/DarkWare/main/MainLoader'),true))()
     end)
 
 
