@@ -448,6 +448,10 @@ end)
         end)
     end)
 
+    MiscSection:NewButton("Bring Script", "Finaly a script that works", function()
+        loadstring(game:HttpGet('https://pastebin.com/raw/eUwg0n1f'))()
+    end)
+
 
     --Other
     local Other = Window:NewTab("Other")
@@ -517,6 +521,10 @@ GamesSection:NewButton("Tower of hell", "Text Deleated", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/jiAQF1tc"))()
 end)
 
+GamesSection:NewButton("Car Crasher", "Beutiful", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/YwkKw09a"))()
+end)
+
 
     --Hubs
     local Hubs = Window:NewTab("Hubs")
@@ -563,6 +571,30 @@ end)
 
     HubsSection:NewButton("backdoor.exe V6X", "Dont Ask Me", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/v6x/source.lua"))();
+    end)
+
+    HubsSection:NewButton("[FE] Shiba Hub", "U can find alot of scripts here", function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/JJU38GMW"))();
+    end)
+
+    HubsSection:NewButton("Malware Hub", "its not really a virus", function()
+        loadstring(game:HttpGet('https://gist.githubusercontent.com/H20CalibreYT/462f6e6236a9371130f113def6549bb1/raw/'))()
+    end)
+
+    HubsSection:NewButton("Universal Hub", "ALOT OF SCRIPTS!!! YAYYYY", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalFEScriptHub/main/Script'))()
+    end)
+
+    HubsSection:NewButton("C00lkid GUI", "Pretty fun when trolling", function()
+        loadstring(game:HttpGet('loadstring(game:GetObjects("rbxassetid://9827584846")[1].Source)()'))()
+    end)
+
+    HubsSection:NewButton("MRDestroyer Hub V2", "DONT COPY MY UI LIBARY", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MrDestroyerSkid/Project-Destroyer/main/Destroyer"))()
+    end)
+
+    HubsSection:NewButton("LostPoint FE Script Hub", "OOOH", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/JunglePush/LostPoint/main/LostPointScript"))()
     end)
 
 
