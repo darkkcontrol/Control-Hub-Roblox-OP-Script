@@ -209,9 +209,9 @@ coroutine.wrap(ANEL_fake_script)()
         loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
     end)
 
-
-   
-
+    MainSection:NewButton("FE Fling GUI", "Flinging time!!!!", function()
+        loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
+    end)
 
 
     --LOCAL PLAYER
@@ -481,45 +481,6 @@ end
     end)
 
 
-    --Fe script
-    local Fe Script = Window:NewTab("Fe Script")
-    local Fe scriptSection = Fe script:NewSection("Fe Script")
-
-    Fe scriptSection:NewButton("FE Freeze Time", "Yo whered u go???", function()
-
-_G.key = Enum.KeyCode.LeftControl
- 
-loadstring(game:HttpGet("https://paste.gg/p/anonymous/cb1c7198b269449eb8a2cf8ced061bed/files/4a98e88f82ee47388b3030a7f000b34e/raw", true))()
- 
-setting = settings().Network
-local Effect = Instance.new("ColorCorrectionEffect")
-Effect.Parent = game.Lighting
-Effect.Saturation = -1 
-Effect.Contrast = 0
-toggle = false
- 
-Effect.Enabled = false
-function onKeyPress(inputObject, gameProcessedEvent)
-	if inputObject.KeyCode == Enum.KeyCode.RightControl then	
-		if toggle == false then
-			setting.IncomingReplicationLag = 1000
-			Effect.Enabled = true
-			toggle = true
-		else
-			setting.IncomingReplicationLag = 0
-			Effect.Enabled = false
-			toggle = false
-		end
- 
-	end
-end
- 
-game:GetService("UserInputService").InputBegan:connect(onKeyPress)
-game:GetService("UserInputService").InputBegan:connect(onKeyPress)
-    end)
-    
-    
-
     --Games
     local Games = Window:NewTab("Games")
     local GamesSection = Games:NewSection("Games")
@@ -557,6 +518,34 @@ end)
 
 GamesSection:NewButton("Car Crasher", "Beutiful", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/YwkKw09a"))()
+end)
+
+GamesSection:NewButton("Chaos Script", "BLOOD!!!", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/AYMcDFQ1"))()
+end)
+
+GamesSection:NewButton("Doors", "Didnt test to um.....", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
+end)
+
+GamesSection:NewButton("Entry Point ", "Out of ideas", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/2VQEyt1H"))()
+end)
+
+GamesSection:NewButton("Da Hood", "Out of ideas", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/AtomGotIce/Scripts/main/Da%20hood%20aim"))()
+end)
+
+GamesSection:NewButton("build a boat for Treasure (babft)", "Out of ideas", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Build%20A%20Boat%20For%20Treasure/Script.lua"))()
+end)
+
+GamesSection:NewButton("jailbreak", "Out of ideas", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Jailbreak/Script.lua"))()
+end)
+
+GamesSection:NewButton("Impossible Glass Bridge Obby GUI", "Out of ideas", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/catgirIz/lev-is-a-baddie/main/Cache/ImpossibleGlassBridgeObby.lua"))();
 end)
 
 
@@ -619,9 +608,6 @@ end)
         loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalFEScriptHub/main/Script'))()
     end)
 
-    HubsSection:NewButton("C00lkid GUI", "Pretty fun when trolling", function()
-        loadstring(game:HttpGet('loadstring(game:GetObjects("rbxassetid://9827584846")[1].Source)()'))()
-    end)
 
     HubsSection:NewButton("MRDestroyer Hub V2", "DONT COPY MY UI LIBARY", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/MrDestroyerSkid/Project-Destroyer/main/Destroyer"))()
@@ -643,8 +629,28 @@ end)
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/Henry887/RemX-Script-Hub/main/main.lua'),true))()
     end)
 
-    HubsSection:NewButton("DarkWare", "Error", function()
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Yarik312/DarkWare/main/MainLoader'),true))()
+    HubsSection:NewButton("VG HUB", "WOW NICE", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+    end)
+
+    HubsSection:NewButton("Sniff Hub", "WOW Cool!!!", function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/2dgeneralspam1/Sniff-Hub/main/Sniff%20Hub'))()
+    end)
+
+    HubsSection:NewButton("FE Trolling GUI", "trolling time!!!!", function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/wDh1eTdX"))()
+    end)
+
+    HubsSection:NewButton("FE Fling GUI", "Flinging time!!!!", function()
+        loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
+    end)
+
+    HubsSection:NewButton("1x1x1x1 GUI", "OP!!!!", function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/CYye6uA4", true))()
+    end)
+
+    HubsSection:NewButton("BackScript Hub", "OP GUI!!!!", function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/wYEeYQsD", true))()
     end)
 
 
