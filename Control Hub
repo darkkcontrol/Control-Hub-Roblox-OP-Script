@@ -8,7 +8,7 @@ game.StarterGui:SetCore("SendNotification", {
 setclipboard("https://discord.gg/t5pzFMPdY4")
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Control Hub | | Made by Dark Control#6967 on discord", "Ocean")
+local Window = Library.CreateLib("Control Hub| | Made by Dark Control#6967 on discord", "Ocean")
     -- MAIN
     local Main = Window:NewTab("Main")
     local MainSection = Main:NewSection("Main")
@@ -211,6 +211,76 @@ coroutine.wrap(ANEL_fake_script)()
 
     MainSection:NewButton("FE Fling GUI", "Flinging time!!!!", function()
         loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
+    end)
+
+    MainSection:NewButton("Chat Bypass", "HEHEHEHEHE", function()
+        local Bypasses = {
+            ["ass"] = "as{{aieixzvzx:s}}",
+            ["asshole"] = "as{{aieixzvzx:shole}}",
+            ["bitch"] = "bit{{aieixzvzx:ch}}",
+            ["cock"] = "co{{aieixzvzx:ck}}",
+            ["cunt"] = "cu{{aieixzvzx:nt}}",
+            ["dick"] = "di{{zczxczvz:ck}}",
+            ["dyke"] = "dy{{aieixzvzx:ke}}",
+            ["faggot"] = "fa{{aieixzvzx:ggot}}",
+            ["fuck"] = "fu{{aieixzvzx:ck}}",
+            ["gaylord"] = "gayl{{aieixzvzx:ord}}",
+            ["kike"] = "ki{{aieixzvzx:ke}}",
+            ["motherfucker"] = "motherf{{aieixzvzx:ucker}}",
+            ["nigga"] = "ni{{aieixzvzx:gga}}",
+            ["nigger"] = "ni{{aieixzvzx:gger}}",
+            ["piss"] = "p{{aieixzvzx:iss}}",
+            ["penis"] = "pe{{aieixzvzx:nis}}",
+            ["pussy"] = "pu{{aieixzvzx:ssy}}",
+            ["shit"] = "sh{{aieixzvzx:it}}",
+            ["slut"] = "sl{{aieixzvzx:ut}}",
+            ["whore"] = "who{{aieixzvzx:re}}",
+            ["discord"] = "disco{{aieixzvzx:rd}}",
+            ["kys"] = "k{{aieixzvzx:ys}}",
+            ["kill"] = "ki{{aieixzvzx:ll}}"
+        }
+        
+        local ReplicatedStorage = game:GetService("ReplicatedStorage")
+        local Remote = ReplicatedStorage:FindFirstChild("SayMessageRequest", true)
+        
+        local ChatBypass; ChatBypass = hookmetamethod(Remote, "__namecall", function(self, ...)
+            local Method = getnamecallmethod()
+            local Arguments = {...}
+            
+            if self == Remote and Method == "FireServer" then
+                local Message = Arguments[1]
+                local Split = Message:split(" ")
+                local FinalMessage = ""
+        
+                for _, x in next, Split do
+                    for _, Bypass in next, Bypasses do
+                        if x:lower() == _ then
+                            if x:upper() ~= x then
+                                Message = Message:gsub(x, Bypass)
+                                FinalMessage = Message .. " ng"
+                            else
+                                Message = Message:gsub(x, Bypass):upper()
+                                FinalMessage = Message:gsub(x, Bypass):upper() .. " ng"
+                            end
+                        end
+                    end
+                end
+                
+                if FinalMessage ~= "" then
+                    Arguments[1] = FinalMessage
+                end
+                
+                return ChatBypass(self, unpack(Arguments))
+            end
+            
+            return ChatBypass(self, ...)
+        end)
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "GUI";
+            Text = "You can now say dick, bitch, ect";
+            Duration = 60;
+        })
+        setclipboard("https://discord.gg/t5pzFMPdY4")
     end)
 
 
@@ -452,6 +522,10 @@ end)
         loadstring(game:HttpGet('https://pastebin.com/raw/eUwg0n1f'))()
     end)
 
+    MiscSection:NewButton("hitbox Script", "Good for sword games", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Min1273/n-to/main/README.md"))()
+    end)
+
 
     --Other
     local Other = Window:NewTab("Other")
@@ -479,6 +553,117 @@ else
     lighting.TimeOfDay = 24
 end
     end)
+
+    OtherSection:NewButton("Chat translator", "It translates the words to English", function()
+        loadstring(game:HttpGetAsync("https://i.qts.life/r/ChatInlineTranslator.lua", true))()
+        --[[
+        af = "Afrikaans",
+            sq = "Albanian",
+            am = "Amharic",
+            ar = "Arabic",
+            hy = "Armenian",
+            az = "Azerbaijani",
+            eu = "Basque",
+            be = "Belarusian",
+            bn = "Bengali",
+            bs = "Bosnian",
+            bg = "Bulgarian",
+            ca = "Catalan",
+            ceb = "Cebuano",
+            ny = "Chichewa",
+            ['zh-cn'] = "Chinese Simplified",
+            ['zh-tw'] = "Chinese Traditional",
+            co = "Corsican",
+            hr = "Croatian",
+            cs = "Czech",
+            da = "Danish",
+            nl = "Dutch",
+            en = "English",
+            eo = "Esperanto",
+            et = "Estonian",
+            tl = "Filipino",
+            fi = "Finnish",
+            fr = "French",
+            fy = "Frisian",
+            gl = "Galician",
+            ka = "Georgian",
+            de = "German",
+            el = "Greek",
+            gu = "Gujarati",
+            ht = "Haitian Creole",
+            ha = "Hausa",
+            haw = "Hawaiian",
+            iw = "Hebrew",
+            hi = "Hindi",
+            hmn = "Hmong",
+            hu = "Hungarian",
+            is = "Icelandic",
+            ig = "Igbo",
+            id = "Indonesian",
+            ga = "Irish",
+            it = "Italian",
+            ja = "Japanese",
+            jw = "Javanese",
+            kn = "Kannada",
+            kk = "Kazakh",
+            km = "Khmer",
+            ko = "Korean",
+            ku = "Kurdish (Kurmanji)",
+            ky = "Kyrgyz",
+            lo = "Lao",
+            la = "Latin",
+            lv = "Latvian",
+            lt = "Lithuanian",
+            lb = "Luxembourgish",
+            mk = "Macedonian",
+            mg = "Malagasy",
+            ms = "Malay",
+            ml = "Malayalam",
+            mt = "Maltese",
+            mi = "Maori",
+            mr = "Marathi",
+            mn = "Mongolian",
+            my = "Myanmar (Burmese)",
+            ne = "Nepali",
+            no = "Norwegian",
+            ps = "Pashto",
+            fa = "Persian",
+            pl = "Polish",
+            pt = "Portuguese",
+            pa = "Punjabi",
+            ro = "Romanian",
+            ru = "Russian",
+            sm = "Samoan",
+            gd = "Scots Gaelic",
+            sr = "Serbian",
+            st = "Sesotho",
+            sn = "Shona",
+            sd = "Sindhi",
+            si = "Sinhala",
+            sk = "Slovak",
+            sl = "Slovenian",
+            so = "Somali",
+            es = "Spanish",
+            su = "Sundanese",
+            sw = "Swahili",
+            sv = "Swedish",
+            tg = "Tajik",
+            ta = "Tamil",
+            te = "Telugu",
+            th = "Thai",
+            tr = "Turkish",
+            uk = "Ukrainian",
+            ur = "Urdu",
+            uz = "Uzbek",
+            vi = "Vietnamese",
+            cy = "Welsh",
+            xh = "Xhosa",
+            yi = "Yiddish",
+            yo = "Yoruba",
+            zu = "Zulu"
+        --]]
+    end)
+
 
 
     --Games
